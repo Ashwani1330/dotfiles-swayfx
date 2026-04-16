@@ -10,20 +10,20 @@ Minimalist configuration for SwayFX (Wayland).
 | Component | Application | Notes |
 | :--- | :--- | :--- |
 | **Window Manager** | [SwayFX](https://github.com/WillPower3309/swayfx) | Blur & Radius enabled |
-| **Bar** | [Waybar](https://github.com/Alexays/Waybar) | Custom CSS & Modules |
+| **Bar** | [Waybar](https://github.com/Alexays/Waybar) | Custom CSS, MPRIS, & Pomodoro |
 | **Terminal** | [Kitty](https://sw.kovidgoyal.net/kitty/) | Catppuccin Mocha Theme |
-| **Launcher** | [Rofi](https://github.com/davatorium/rofi) | Run / Drun modes |
+| **Launcher** | [Rofi](https://github.com/davatorium/rofi) | Run / Drun / Window modes |
 | **Lock Screen** | [Swaylock](https://github.com/swaywm/swaylock) | Custom ring colors |
-| **Notifications** | [Mako](https://github.com/emersion/mako) | Minimalist daemon |
+| **Notifications** | [SwayNC](https://github.com/ErikReider/SwayNotificationCenter) | Feature-rich notification center |
 | **Compositor** | Native | SwayFX handles composition |
 
 ## Theming
 
-* **Palette:** Catppuccin Mocha
-* **Bar Font:** SF Pro Text, Inter, NotoSans Nerd Font
-* **Terminal Font:** FiraCode Nerd Font Mono
-* **Icons:** Oranchelo
-* **Wallpaper:** Managed via Sway config
+  * **Palette:** Catppuccin Mocha
+  * **Bar Font:** SF Pro Text, Inter, NotoSans Nerd Font
+  * **Terminal Font:** FiraCode Nerd Font Mono
+  * **Icons:** Papirus
+  * **Wallpaper:** Managed via Sway config
 
 ## Key Bindings
 
@@ -38,7 +38,11 @@ Minimalist configuration for SwayFX (Wayland).
 | `Mod` + `d` | App Launcher | `rofi -show drun` |
 | `Mod` + `Shift` + `d` | Run Command | `rofi -show run` |
 | `Mod` + `.` | Emoji Picker | `rofi -show emoji` |
-| `Mod` + `c` | Clipboard Manager | `greenclip` |
+| `Mod` + `c` | Clipboard Manager | `cliphist` |
+| **Navigation & Workspaces** | | |
+| `Alt` + `Tab` | MRU Window Swap | `swayr` |
+| `Mod` + `Tab` | Visual Window List | `swayr switch-window` |
+| `Mod` + `Ctrl` + `Arrows` | Move Workspace | `move workspace to output` |
 | **System** | | |
 | `Mod` + `Shift` + `q` | Kill Focused Window | `kill` |
 | `Mod` + `Shift` + `x` | Lock Screen | `swaylock` |
@@ -66,10 +70,12 @@ Minimalist configuration for SwayFX (Wayland).
 
 ## Utilities Setup
 
-* **Screenshot:** `grim` + `slurp` (Copies to clipboard)
-* **Clipboard:** `greenclip` daemon
-* **Auth Agent:** `polkit-gnome`
-* **Tiling:** `autotiling` script
+  * **Screenshot:** `grim` + `slurp` (Copies to clipboard)
+  * **Clipboard:** `cliphist` with Rofi integration
+  * **Audio:** PipeWire with `qpwgraph` for patchbay control
+  * **Gestures:** Native 3-finger (workspaces) and 4-finger (window list) swipes
+  * **Tiling:** `autotiling` script
+  * **Auth Agent:** `polkit-gnome`
 
 ---
 
