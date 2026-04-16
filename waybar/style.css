@@ -74,6 +74,30 @@
   color: #c6d0f5;
 }
 
+
+/* --- MPRIS / Music Player --- */
+#mpris {
+  background-color: #1a1b26;
+  color: #89b4fa; /* Catppuccin Blue for music */
+  padding: 0.3rem 0.8rem;
+  margin: 5px 5px 5px 10px; /* Added left margin to separate from CPU */
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+  min-width: 150px;
+}
+
+#mpris:hover {
+  background-color: rgb(41, 42, 53);
+  color: #b4befe;
+}
+
+/* Make paused text slightly dimmed */
+#mpris.paused {
+  color: #a6adc8; 
+}
+
 /* --- Center Module --- */
 #clock {
   background-color: #1a1b26;

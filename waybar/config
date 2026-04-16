@@ -7,7 +7,8 @@
   "modules-left": [
     "sway/workspaces",
     "custom/uptime",
-    "cpu"
+    "cpu",
+    "mpris"
   ],
   "modules-center": [
     "clock"
@@ -140,5 +141,14 @@
     "exec": "waybar-module-pomodoro --no-work-icons -w 45",
     "on-click": "waybar-module-pomodoro toggle",
     "on-click-right": "waybar-module-pomodoro reset"
+  },
+  "mpris": {
+    "format": "  <b>{dynamic}</b>",
+    "format-paused": "󰏤  <i>{dynamic}</i>",
+    "max-length": 30,
+    "dynamic-len": 30,
+    "dynamic-importance": ["title", "artist"],
+    "on-click": "playerctl play-pause",
+    "on-click-right": "playerctl next"
   }
 }
