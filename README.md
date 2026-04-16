@@ -40,8 +40,8 @@ Minimalist configuration for SwayFX (Wayland).
 | `Mod` + `.` | Emoji Picker | `rofi -show emoji` |
 | `Mod` + `c` | Clipboard Manager | `cliphist` |
 | **Navigation & Workspaces** | | |
-| `Alt` + `Tab` | MRU Window Swap | `swayr` |
-| `Mod` + `Tab` | Visual Window List | `swayr switch-window` |
+| `Alt` + `Tab` | MRU Window Swap | `swayr switch-to-urgent-or-lru-window` |
+| `Mod` + `Tab` | Visual Window List | `rofi -show window` |
 | `Mod` + `Ctrl` + `Arrows` | Move Workspace | `move workspace to output` |
 | **System** | | |
 | `Mod` + `Shift` + `q` | Kill Focused Window | `kill` |
